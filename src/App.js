@@ -22,6 +22,21 @@ const App = () => {
     setMovies(data.results);
   };
 
+  // search terms
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+
+    if (searchTerm && searchTerm !== '') {
+      getMovies(SEARCH_API + searchTerm);
+      setSearchTerm('');
+    } else {
+      window.location.reload();
+    }
+  };
+
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
   return (
     <>
