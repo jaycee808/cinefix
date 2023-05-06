@@ -8,6 +8,8 @@ const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=2f1ce84a14
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  
+  console.log(movies);
 
   // Call getMovies function
   useEffect(() => {
@@ -42,6 +44,15 @@ const App = () => {
     <>
       <header>
       <h1 id="logo">cinefix.</h1>
+      <form onSubmit={handleOnSubmit}>
+          <input
+            className="search"
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={handleOnChange}
+          />
+        </form>
       </header>
     </>
   );
