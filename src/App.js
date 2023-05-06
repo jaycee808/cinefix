@@ -54,6 +54,27 @@ const App = () => {
           />
         </form>
       </header>
+      <main>
+        {movies.map((movie) => {
+          const { id, title, poster_path, overview, vote_average } = movie;
+
+          return (
+            <div key={id} className="movie">
+              <img src={IMG_PATH + poster_path} alt={title} />
+              <div className="movie-info">
+                <h3>{title}</h3>
+              </div>
+              <div className="movie-rating">
+                <h3>IMDb Rating: {vote_average}</h3>
+              </div>
+              <div className="overview">
+                <h3>Overview</h3>
+                <p>{overview}</p>
+              </div>
+            </div>
+          );
+        })}
+      </main>
     </>
   );
 };
