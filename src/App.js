@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 // API searches
 const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=2f1ce84a1413ea3ccdba3439dfef68e2';
+const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=2f1ce84a1413ea3ccdba3439dfef68e2&query=';
 
 const App = () => {
