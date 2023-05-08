@@ -7,10 +7,35 @@ const MOVIE_SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=2f1c
 const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=';
 
 
-// Function to add Wikipedia Link for each film
-function WikipediaLink({searchTerm} {
+// Function to get Wikipedia Link for each film
+function WikipediaLink({ searchTerm }) {
   const [articles, setArticles] = useState([]);
-})
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      if (searchTerm && searchTerm !== '') {
+        const res = await fetch(WIKIPEDIA_API_URL + searchTerm);
+        const data = await res.json();
+        setArticles(data.query.search);
+      } else {
+        setArticles([]);
+      }
+    };
+    fetchArticles();
+  }, [searchTerm]);
+
+  return (
+    <>
+      {articles.map((article) => (
+        <div key={article.pageid}>
+          <a href={`http://en.wikipedia.org/?curid=${article.pageid}`} target="_blank" rel="noopener noreferrer">
+            {article.title}
+          </a>
+        </div>
+      ))}
+    </>
+  );
+}
 
 // Function to retrieve film data
 function App() {
