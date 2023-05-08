@@ -6,7 +6,14 @@ const MOVIE_IMG_PATH = 'https://image.tmdb.org/t/p/w500';
 const MOVIE_SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=2f1ce84a1413ea3ccdba3439dfef68e2&query=';
 const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=';
 
-const App = () => {
+
+// Function to add Wikipedia Link for each film
+function WikipediaLink({searchTerm} {
+  const [articles, setArticles] = useState([]);
+})
+
+// Function to retrieve film data
+function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   
