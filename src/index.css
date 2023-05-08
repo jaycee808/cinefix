@@ -9,7 +9,7 @@ body {
   font-family: 'Archivo Black', sans-serif;
   line-height: 8%;
   font-size: 3.5rem;
-  color: #d6c1d1;
+  color: #FFF;
   -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
           transform: skew(-5deg, -5deg) rotate(5deg);
   -webkit-transform-origin: center center;
@@ -21,6 +21,13 @@ body {
               5px 5px #5f0818,
               6px 6px #5c0213,
               6px 6px 8px rgba(0,0,0,0.5);
+}
+
+main {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 46%;
+  overflow-x: scroll;
 }
 
 /* Header & Search bar styles */
@@ -66,7 +73,7 @@ header {
 }
 
 .movie-card-display {
-  display: grid;
+
 }
 
 .movie-title {
