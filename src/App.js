@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const MOVIE_API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=2f1ce84a1413ea3ccdba3439dfef68e2';
 const MOVIE_IMG_PATH = 'https://image.tmdb.org/t/p/w500';
 const MOVIE_SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=2f1ce84a1413ea3ccdba3439dfef68e2&query=';
-const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=';
+const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=1&format=json&origin=*&srsearch=';
 
 
 // Function to get Wikipedia Link for each film
@@ -95,7 +95,7 @@ function App() {
             <div key={id} className="movie">
               <img src={MOVIE_IMG_PATH + poster_path} alt={title} />
               <div className="movie-info">
-                <h3>{title}</h3>
+                <h2>{title}</h2>
               </div>
               <div className="movie-rating">
                 <h3>IMDb Rating: {vote_average}</h3>
@@ -104,6 +104,8 @@ function App() {
                 <h3>Overview</h3>
                 <p>{overview}</p>
               </div>
+              <h3>Wikipedia Page: </h3>
+              <WikipediaLink searchTerm={title} />
             </div>
           );
         })}
