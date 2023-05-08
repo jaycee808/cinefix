@@ -7,10 +7,49 @@ body {
 
 #logo {
   font-family: 'Archivo Black', sans-serif;
+  line-height: 8%;
+  font-size: 3.5rem;
+  color: #fff;
+  -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
+          transform: skew(-5deg, -5deg) rotate(5deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  text-shadow:1px 1px #d10e31,
+              2px 2px #d10e31,
+              3px 3px #d10e31,
+              4px 4px #890920,
+              5px 5px #5f0818,
+              6px 6px #5c0213,
+              6px 6px 8px rgba(0,0,0,0.5);
+}
+
+header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+}
+
+.search {
+  background-color: #000;
+  border: 2px solid #FFF;
+  color: #FFF;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.search::placeholder {
+  color: #FFF;
+}
+
+.search:focus {
+  outline: none;
 }
 
 .movie-title {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
 }
 
 .movie-rating {
@@ -22,5 +61,5 @@ body {
 }
 
 .wiki-link {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
