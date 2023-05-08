@@ -76,7 +76,7 @@ function App() {
   return (
     <>
       <header>
-      <h1 id="logo">cinefix.</h1>
+      <h1 id="logo">CINEFIX.</h1>
       <form onSubmit={handleOnSubmit}>
           <input
             className="search"
@@ -94,7 +94,7 @@ function App() {
           return (
             <div key={id} className="movie">
               <img src={MOVIE_IMG_PATH + poster_path} alt={title} />
-              <div className="movie-info">
+              <div className="movie-title">
                 <h2>{title}</h2>
               </div>
               <div className="movie-rating">
@@ -104,8 +104,10 @@ function App() {
                 <h3>Overview</h3>
                 <p>{overview}</p>
               </div>
-              <h3>Wikipedia Page: </h3>
-              <WikipediaLink searchTerm={title} />
+              <div className="wiki-link">
+                <h3>Wikipedia Page: </h3>
+                <WikipediaLink searchTerm={title} />
+              </div>
             </div>
           );
         })}
