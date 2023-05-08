@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 // API searches
-const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=2f1ce84a1413ea3ccdba3439dfef68e2';
-const IMG_PATH = 'https://image.tmdb.org/t/p/w500';
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=2f1ce84a1413ea3ccdba3439dfef68e2&query=';
+const MOVIE_API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=2f1ce84a1413ea3ccdba3439dfef68e2';
+const MOVIE_IMG_PATH = 'https://image.tmdb.org/t/p/w500';
+const MOVIE_SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=2f1ce84a1413ea3ccdba3439dfef68e2&query=';
+const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -13,7 +14,7 @@ const App = () => {
 
   // Call getMovies function
   useEffect(() => {
-    getMovies(API_URL);
+    getMovies(MOVIE_API_URL);
   }, []);
 
   // getMovies function
@@ -29,7 +30,7 @@ const App = () => {
     e.preventDefault();
 
     if (searchTerm && searchTerm !== '') {
-      getMovies(SEARCH_API + searchTerm);
+      getMovies(MOVIE_SEARCH_API + searchTerm);
       setSearchTerm('');
     } else {
       window.location.reload();
@@ -60,7 +61,7 @@ const App = () => {
 
           return (
             <div key={id} className="movie">
-              <img src={IMG_PATH + poster_path} alt={title} />
+              <img src={MOVIE_IMG_PATH + poster_path} alt={title} />
               <div className="movie-info">
                 <h3>{title}</h3>
               </div>
