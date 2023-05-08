@@ -9,7 +9,7 @@ body {
   font-family: 'Archivo Black', sans-serif;
   line-height: 8%;
   font-size: 3.5rem;
-  color: #fff;
+  color: #d6c1d1;
   -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
           transform: skew(-5deg, -5deg) rotate(5deg);
   -webkit-transform-origin: center center;
@@ -23,6 +23,7 @@ body {
               6px 6px 8px rgba(0,0,0,0.5);
 }
 
+/* Header & Search bar styles */
 header {
   padding: 1.5rem;
   display: flex;
@@ -47,6 +48,27 @@ header {
   outline: none;
 }
 
+/* Display Cards styles */ 
+
+.movie {
+  display: grid;
+  margin: 10px;
+  padding: 0.2rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(15, 14, 14, 0.712);
+  position: relative;
+  overflow: hidden;
+}
+
+.movie img {
+  inline-size: 100%;
+  border-radius: 4px;
+}
+
+.movie-card-display {
+  display: grid;
+}
+
 .movie-title {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -58,8 +80,20 @@ header {
 
 .overview {
   font-family: 'Roboto', sans-serif;
+  color: #000;
+  font-size: 18px;
 }
 
 .wiki-link {
   font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 800px) {
+  main {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 48%;
+    padding: 1rem;
+    overflow-x: scroll;
+  }
 }

@@ -93,6 +93,7 @@ function App() {
           return (
             <div key={id} className="movie">
               <img src={MOVIE_IMG_PATH + poster_path} alt={title} />
+              <div className="movie-card-display">
               <div className="movie-title">
                 <h2>{title}</h2>
               </div>
@@ -106,6 +107,7 @@ function App() {
               <div className="wiki-link">
                 <h3>Wikipedia Page: </h3>
                 <WikipediaLink searchTerm={title} />
+              </div>
               </div>
             </div>
           );
