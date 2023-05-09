@@ -34,9 +34,10 @@ a {
 
 main {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 26%;
-  overflow-x: scroll;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr;
+  margin: auto;
+  width: 90%;
+  padding: 10px;
 }
 
 /* Header & Search bar styles */
@@ -155,20 +156,39 @@ header {
   main {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 33%;
+    grid-auto-columns: 24%;
     padding: 1rem;
     overflow-x: scroll;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   #logo {
     display: flex;
   }
+}
 
-  .movie {
-    margin: 8px;
-    padding: 0.2rem;
-    position: relative;
-    width: 180px;
-    height: 80dvh;
+@media (max-width: 600px) {
+  main {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 24%;
+    padding: 1rem;
+    overflow-x: scroll;
+  }
+
+  header {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .search {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
   }
 }
