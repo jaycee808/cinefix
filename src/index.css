@@ -16,13 +16,11 @@ a {
 
 #logo {
   font-family: 'Archivo Black', sans-serif;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  font-size: 6rem;
-  position: absolute;
-  font-weight: 710;
-  max-width: 80%;
+  line-height: 8%;
+  font-size: 3.5rem;
   color: #FFF;
+  -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
+          transform: skew(-5deg, -5deg) rotate(5deg);
   -webkit-transform-origin: center center;
           transform-origin: center center;
   text-shadow:1px 1px #d10e31,
@@ -39,14 +37,13 @@ main {
   grid-auto-flow: column;
   grid-auto-columns: 26%;
   overflow-x: scroll;
-  margin-left: -160px;
 }
 
 /* Header & Search bar styles */
 header {
   padding: 1rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .search {
@@ -54,8 +51,9 @@ header {
   border: 1px solid #000;
   color: #000;
   font-size: 1rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 8px;
+  margin-top: 1rem;
 }
 
 .search::placeholder {
@@ -67,12 +65,6 @@ header {
 }
 
 /* Display Cards styles */ 
-
-#movie-card-display {
-  position: relative;
-  top: 18px;
-  left: 80px;
-}
 
 .movie {
   margin: 8px;

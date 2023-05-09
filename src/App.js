@@ -75,7 +75,8 @@ function App() {
   return (
     <>
       <header>
-        <form onSubmit={handleOnSubmit}>
+      <h1 id="logo">CINEFIX.</h1>
+      <form onSubmit={handleOnSubmit}>
           <input
             className="search"
             type="text"
@@ -86,9 +87,6 @@ function App() {
         </form>
       </header>
       <main>
-      <div id="movie-card-display">
-      <h1 id="logo">CINEFIX.</h1>
-      </div>
         {movies.map((movie) => {
           const { id, title, poster_path, overview, vote_average } = movie;
 
