@@ -95,7 +95,10 @@ function App() {
           return (
             
             <div key={id} className="movie">
+            <div className="image">
               <img src={MOVIE_IMG_PATH + poster_path} alt={title} />
+            </div>
+            <div className="card-content">
               <div className="movie-title">
                 <h2>{title}</h2>
               </div>
@@ -111,7 +114,7 @@ function App() {
                 <WikipediaLink searchTerm={title} />
               </div>
               </div>
-
+          </div>
           );
         })}
       </main>
