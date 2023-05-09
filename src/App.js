@@ -75,8 +75,7 @@ function App() {
   return (
     <>
       <header>
-      <h1 id="logo">CINEFIX.</h1>
-      <form onSubmit={handleOnSubmit}>
+        <form onSubmit={handleOnSubmit}>
           <input
             className="search"
             type="text"
@@ -87,29 +86,32 @@ function App() {
         </form>
       </header>
       <main>
+      <div id="movie-card-display">
+      <h1 id="logo">CINEFIX.</h1>
+      </div>
         {movies.map((movie) => {
           const { id, title, poster_path, overview, vote_average } = movie;
 
           return (
+            
             <div key={id} className="movie">
               <img src={MOVIE_IMG_PATH + poster_path} alt={title} />
-              <div className="movie-card-display">
               <div className="movie-title">
                 <h2>{title}</h2>
-              </div>
-              <div className="movie-rating">
-                <h3>IMDb Rating: {vote_average}</h3>
               </div>
               <div className="overview">
                 <h3>Overview</h3>
                 <p>{overview}</p>
+              </div>
+              <div className="movie-rating">
+                <h3>IMDb Rating: {vote_average}</h3>
               </div>
               <div className="wiki-link">
                 <h3>Wikipedia Page: </h3>
                 <WikipediaLink searchTerm={title} />
               </div>
               </div>
-            </div>
+
           );
         })}
       </main>

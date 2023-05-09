@@ -4,19 +4,24 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("images/33.jpg");
+  background-image: url("images/29.png");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 }
 
+a {
+  color: #FFF;
+}
 #logo {
   font-family: 'Archivo Black', sans-serif;
-  line-height: 8%;
-  font-size: 3.5rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 7rem;
+  position: absolute;
+  font-weight: 710;
+  max-width: 80%;
   color: #FFF;
-  -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
-          transform: skew(-5deg, -5deg) rotate(5deg);
   -webkit-transform-origin: center center;
           transform-origin: center center;
   text-shadow:1px 1px #d10e31,
@@ -33,26 +38,27 @@ main {
   grid-auto-flow: column;
   grid-auto-columns: 26%;
   overflow-x: scroll;
+  margin-left: -150px;
 }
 
 /* Header & Search bar styles */
 header {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .search {
   background-color: transparent;
-  border: 2px solid #FFF;
-  color: #FFF;
+  border: 1px solid #000;
+  color: #000;
   font-size: 1rem;
-  padding: 1.5rem;
-  border-radius: 20px;
+  padding: 0.3rem;
+  border-radius: 8px;
 }
 
 .search::placeholder {
-  color: #FFF;
+  color: #000;
 }
 
 .search:focus {
@@ -61,13 +67,17 @@ header {
 
 /* Display Cards styles */ 
 
-.movie {
-  display: grid;
-  margin: 10px;
-  padding: 0.2rem;
-  border-radius: 6px;
+#movie-card-display {
   position: relative;
-  background: rgba( 5, 5, 5, 0.5 );
+  top: 18px;
+  left: 80px;
+}
+
+.movie {
+  margin: 8px;
+  padding: 0.8rem;
+  border-radius: 12px;
+  background: rgba(15, 16, 64, 0.536);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 1px );
   -webkit-backdrop-filter: blur( 1px );
@@ -76,18 +86,13 @@ header {
 .movie img {
   inline-size: 100%;
   border-radius: 4px;
-  height: 60dvh;
-}
-
-.movie-card-display {
-  
+  height: auto;
 }
 
 .movie-title {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   color: #FFF;
-  margin-top: -60px;
 }
 
 .movie-rating {
