@@ -75,7 +75,7 @@ function App() {
   return (
     <>
       <header>
-      <h1 id="logo">CINEFIX.</h1>
+      <h1 id="logo"><a href="https://cinefix.netlify.app/">CINEFIX.</a></h1>
       <form onSubmit={handleOnSubmit}>
           <input
             className="search"
@@ -108,8 +108,10 @@ function App() {
                 <h3>IMDb Rating: {vote_average}</h3>
               </div>
               <div className="wiki-link">
-                <h3>Wikipedia Page: </h3>
-                <WikipediaLink searchTerm={title} />
+                <button className="wiki-btn">
+                  Find more info on Wikipedia
+                  <WikipediaLink searchTerm={title} />
+                </button>
               </div>
               </div>
           </div>
