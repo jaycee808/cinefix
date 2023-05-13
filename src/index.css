@@ -159,11 +159,50 @@ header {
 }
 
 .wiki-btn {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif;
   color: #000;
   margin-left: 12px;
-  margin-right: 12px;
+  margin-right: 12px; */
+
+  background-color: #000;
+  -webkit-border-radius: 60px;
+  border-radius: 8px;
+  color: #FFF;
+  border: 2px solid #FFF;
+  margin-left: 12px;
+  margin-right: 12px; 
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
 }
+
+@keyframes glowing {
+  0% {
+    border: 2px solid #0000F0;
+    box-shadow: 0 0 3px #0000F0;
+  }
+  50% {
+    border: 2px solid #F000E4;
+    box-shadow: 0 0 10px #F000E4;
+  }
+  100% {
+    border: 2px solid #0000F0;
+    box-shadow: 0 0 3px #0000F0;
+  }
+}
+
+.wiki-btn {
+  animation: glowing 4000ms infinite ease;
+}
+
+.wiki-btn a {
+  color: #FFF;
+}
+
+
 
 /* Custom Scrollbar */
 
