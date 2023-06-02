@@ -2,16 +2,14 @@
 
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url("images/blue-retro.jpg");
+  background-image: url("images/blue-purple-retro.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 }
 
 a {
-  color: #FFF;
+  color: #ECECEC;
   text-decoration: none;
 }
 
@@ -19,18 +17,22 @@ a {
   font-family: 'Archivo Black', sans-serif;
   line-height: 8%;
   font-size: 3.5rem;
-  color: #FFF;
+  color: #ECECEC;
   -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
           transform: skew(-5deg, -5deg) rotate(5deg);
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  text-shadow:1px 1px #d10e31,
-              2px 2px #d10e31,
-              3px 3px #d10e31,
-              4px 4px #890920,
-              5px 5px #5f0818,
-              6px 6px #5c0213,
-              6px 6px 8px rgba(0,0,0,0.5);
+  text-shadow:1px 1px #5643D0,
+              2px 2px #5544c4,
+              3px 3px #5041b0,
+              4px 4px #4e3faa,
+              5px 5px #43388f,
+              6px 6px #403780,
+              7px 7px #3a3178,
+              8px 8px #2b1f5b,
+              9px 9px #201841,
+              10px 10px #0f0c1c,
+              12px 12px 10px rgba(0,0,0,1);
 }
 
 main {
@@ -49,17 +51,17 @@ header {
 }
 
 .search {
-  background-color: transparent;
-  border: 2px solid #FFF;
-  color: #FFF;
+  background-color: #221348;
+  border: 2px solid #6FC1F1;
+  color: #ECECEC;
   font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 8px;
+  padding: 1rem;
   margin-top: 1rem;
+  width: 280px;
 }
 
 .search::placeholder {
-  color: #FFF;
+  color: #ECECEC;
 }
 
 .search:focus {
@@ -77,10 +79,9 @@ header {
   position: relative;
   width: 320px;
   height: 80dvh;
-  background-color: #000;
+  background-color: #221347;
   font-family: 'Roboto', sans-serif;
-  border: 2px solid #FFF;
-  border-radius: 8px;
+  border: 2px solid #6FC1F1;
 }
 
 .movie img {
@@ -88,7 +89,6 @@ header {
   height: 100%;
   object-fit: cover;
   transition: 0.6s;
-  border-radius: 8px;
 }
 
 .movie:hover img {
@@ -100,7 +100,7 @@ header {
   bottom: 0px;
   width: 80%;
   height: 80px;
-  background-color: #000;
+  background-color: #221347;
   left: 10%;
   transition: 0.5s;
   overflow: hidden;
@@ -108,21 +108,16 @@ header {
 }
 
 .movie:hover .card-content {
-  height: 98%;
+  height: 99%;
   width: 98%;
   left: 0%;
+  background-color: #221347;
   overflow: scroll;
-
-  /* width: 320px;
-  height: 80dvh; */
-  background-color: #000;
-  border-radius: 8px;
 }
 
 .card:hover p,
 .card:hover a {
   opacity: 1;
-  transition-delay: 0.5s;
 }
 
 .image {
@@ -137,13 +132,13 @@ header {
 .movie-title {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  color: #FFF;
+  color: #ECECEC;
   text-align: center;
 }
 
 .movie-rating {
   font-family: 'Roboto', sans-serif;
-  color: #FFF;
+  color: #ECECEC;
   margin: 6px;
   margin-left: 12px;
   margin-right: 12px;
@@ -151,7 +146,7 @@ header {
 
 .overview {
   font-family: 'Roboto', sans-serif;
-  color: #FFF;
+  color: #ECECEC;
   font-size: 18px;
   margin-top: 35px;
   margin-left: 12px;
@@ -159,16 +154,9 @@ header {
 }
 
 .wiki-btn {
-  /* font-family: 'Roboto', sans-serif;
-  color: #000;
-  margin-left: 12px;
-  margin-right: 12px; */
-
-  background-color: #000;
-  -webkit-border-radius: 60px;
-  border-radius: 8px;
-  color: #FFF;
-  border: 2px solid #FFF;
+  background-color: #221347;
+  color: #ECECEC;
+  border: 2px solid #ECECEC;
   margin-left: 12px;
   margin-right: 12px; 
   cursor: pointer;
@@ -181,16 +169,16 @@ header {
 
 @keyframes glowing {
   0% {
-    border: 2px solid #0000F0;
-    box-shadow: 0 0 3px #0000F0;
+    border: 2px solid #5643D0;
+    box-shadow: 0 0 3px #5643D0;
   }
   50% {
-    border: 2px solid #F000E4;
-    box-shadow: 0 0 10px #F000E4;
+    border: 2px solid #6FC1F1;
+    box-shadow: 0 0 10px #6FC1F1;
   }
   100% {
-    border: 2px solid #0000F0;
-    box-shadow: 0 0 3px #0000F0;
+    border: 2px solid #5643D0;
+    box-shadow: 0 0 3px #5643D0;
   }
 }
 
@@ -199,22 +187,19 @@ header {
 }
 
 .wiki-btn a {
-  color: #FFF;
+  color: #ECECEC;
 }
-
-
 
 /* Custom Scrollbar */
 
 .card-content::-webkit-scrollbar {
-	background-color: #FFF;
+	background-color: #221347;
   height: 0px;
   width: 6px;
-  border-radius: 2px;
 }
 
 .card-content::-webkit-scrollbar-thumb {
-	background-color: #002244;
+	background-color: #221347;
 }
 
 @media (max-width: 800px) {
@@ -238,6 +223,4 @@ header {
     width: 250px;
     height: 80dvh;
   }
-  
-
 }
